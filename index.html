@@ -48,16 +48,15 @@
     text-align: center;
   }
   .hero-image {
-    max-width: 880px;
+    max-width: 560px;
     margin: 40px auto 0;
     padding: 0 24px;
   }
   .hero-image img {
     width: 100%;
-    height: auto;
-    max-height: 520px;
+    height: 360px;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 25%;
     border-radius: 8px;
     box-shadow: 0 20px 50px -20px rgba(139, 69, 48, 0.3);
     display: block;
@@ -202,7 +201,7 @@
   /* Image utilities */
   .section-image {
     margin: 0 auto 48px;
-    max-width: 760px;
+    max-width: 560px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 16px 40px -20px rgba(139, 69, 48, 0.25);
@@ -211,6 +210,29 @@
     width: 100%;
     height: auto;
     display: block;
+  }
+
+  /* Photo collage */
+  .photo-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 760px;
+    margin: 32px auto 16px;
+  }
+  .photo-collage img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px -10px rgba(139, 69, 48, 0.25);
+    transition: transform 0.3s;
+  }
+  .photo-collage img:hover { transform: translateY(-3px); }
+  @media (max-width: 600px) {
+    .photo-collage { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .photo-collage img { height: 150px; }
+    .photo-collage img:nth-child(3) { grid-column: 1 / -1; height: 180px; }
   }
   .image-caption {
     text-align: center;
@@ -223,19 +245,18 @@
   .split-image {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
-    margin: 32px auto 48px;
-    max-width: 760px;
+    gap: 20px;
+    margin: 24px auto 32px;
+    max-width: 680px;
     align-items: center;
   }
   @media (min-width: 720px) {
-    .split-image { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .split-image { grid-template-columns: 1fr 1.2fr; gap: 28px; }
   }
   .split-image img {
     width: 100%;
-    height: 100%;
+    height: 280px;
     object-fit: cover;
-    max-height: 420px;
     border-radius: 8px;
     box-shadow: 0 12px 30px -15px rgba(139, 69, 48, 0.25);
   }
@@ -653,10 +674,6 @@
     <div class="divider"></div>
     <p class="section-intro">這套源自印度喀拉拉邦的傳統療癒系統，最初是為產後母親設計，但同樣適用於所有想深度調養身心、回到自己身體的女性。</p>
 
-    <div class="section-image">
-      <img src="images/whom-tender-gaze.jpg" alt="Milliya 以溫柔目光陪伴客戶，是這套療程的核心精神" loading="lazy">
-    </div>
-
     <div class="for-whom-grid">
       <div class="whom-card">
         <h3>產後 6 個月內的媽媽</h3>
@@ -692,9 +709,6 @@
       <li>身體有一種「空」，但補品、月子餐、瑜伽都填不滿</li>
       <li>渴望被照顧，又怕被誤解為「太矯情」</li>
     </ul>
-    <div class="section-image" style="margin-top: 48px;">
-      <img src="images/pain-holding-hands.jpg" alt="一雙手溫柔接住另一雙手——這套療程從「被深深承接」開始" loading="lazy">
-    </div>
   </div>
 </section>
 
@@ -714,10 +728,12 @@
       而 Vāta 最直接的解方，就是溫熱的油、被按摩進筋膜裡的那種深度安頓。
     </div>
 
-    <div class="section-image">
-      <img src="images/philosophy-oil-detail.jpg" alt="銅壺中溫熱的藥草浸泡油緩緩落下——這是 Vāta 過盛最直接的解方" loading="lazy">
-      <p class="image-caption">溫油的儀式 · 是身體被深深安頓的開始</p>
+    <div class="photo-collage">
+      <img src="images/whom-tender-gaze.jpg" alt="溫柔的目光" loading="lazy">
+      <img src="images/philosophy-oil-detail.jpg" alt="溫油從銅壺中落下" loading="lazy">
+      <img src="images/pain-holding-hands.jpg" alt="一雙手接住另一雙手" loading="lazy">
     </div>
+    <p class="image-caption" style="margin-bottom: 32px;">三個片刻 · 從目光、溫油、到承接</p>
 
     <p>這套源自喀拉拉邦的傳統系統，結合按摩、藥草薰蒸、藥草浴三大主軸，目的只有一個——讓妳重新住回自己的身體。</p>
   </div>
@@ -1015,8 +1031,8 @@
     <div class="section-eyebrow">About · 關於陪伴妳的人</div>
     <h2 class="section-title">為什麼是我</h2>
     <div class="divider"></div>
-    <div class="section-image" style="max-width: 560px;">
-      <img src="images/about-focused.jpg" alt="Milliya 專注地為客戶進行療程">
+    <div class="section-image" style="max-width: 320px; margin-bottom: 36px;">
+      <img src="images/about-focused.jpg" alt="Milliya 專注地為客戶進行療程" style="border-radius: 50%; aspect-ratio: 1/1; object-fit: cover; object-position: center 30%;">
     </div>
     <div class="about-content">
       <p>我是 Milliya，孕產教育的陪產員、女性身心靈整合教練。</p>
