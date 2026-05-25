@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>阿育吠陀產後按摩 · 暨女性身心調養 | Milliya</title>
+<meta name="description" content="五千年印度傳統療癒系統 × 陪產員的身心整合視角。為產後媽媽與所有渴望被深深承接的女性。台北北投工作室 / 大台北到府。">
+<meta property="og:title" content="阿育吠陀產後按摩 · 暨女性身心調養 | Milliya">
+<meta property="og:description" content="五千年印度傳統療癒系統 × 陪產員的身心整合視角。為產後媽媽與所有渴望被深深承接的女性。">
+<meta property="og:image" content="images/hero-oil-pouring.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -41,6 +46,21 @@
     background: linear-gradient(180deg, #F2E9DC 0%, #FAF6F0 100%);
     padding: 80px 24px 60px;
     text-align: center;
+  }
+  .hero-image {
+    max-width: 880px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px -20px rgba(139, 69, 48, 0.3);
+    display: block;
   }
   .om-symbol {
     font-size: 56px;
@@ -177,6 +197,53 @@
     font-size: 24px;
     line-height: 1;
     top: 14px;
+  }
+
+  /* Image utilities */
+  .section-image {
+    margin: 0 auto 48px;
+    max-width: 760px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px -20px rgba(139, 69, 48, 0.25);
+  }
+  .section-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .image-caption {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-soft);
+    margin-top: 12px;
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+  .split-image {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 32px auto 48px;
+    max-width: 760px;
+    align-items: center;
+  }
+  @media (min-width: 720px) {
+    .split-image { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  .split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 420px;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px -15px rgba(139, 69, 48, 0.25);
+  }
+  .split-image-text { color: var(--text-soft); font-size: 15px; }
+  .split-image-text h3 {
+    color: var(--primary-dark);
+    font-size: 20px;
+    margin-bottom: 12px;
   }
 
   /* Philosophy */
@@ -507,11 +574,52 @@
   }
   footer a { color: var(--gold); text-decoration: none; }
 
+  /* Hero CTA */
+  .hero-cta {
+    margin-top: 32px;
+  }
+  .hero-cta .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+    display: inline-block;
+    box-shadow: 0 8px 20px -8px rgba(184, 101, 74, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -8px rgba(184, 101, 74, 0.6);
+  }
+
+  /* Sticky mobile CTA */
+  .sticky-cta {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 24px -4px rgba(139, 69, 48, 0.5);
+    z-index: 100;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .sticky-cta:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
   @media (max-width: 600px) {
     .hero h1 { font-size: 30px; }
     .section-title { font-size: 24px; }
     .technique { padding: 24px 20px; }
     .price-option { padding: 16px 20px; }
+    .hero-image img { max-height: 360px; }
+    .sticky-cta { bottom: 12px; right: 12px; padding: 12px 20px; font-size: 13px; }
   }
 </style>
 </head>
@@ -529,6 +637,12 @@
   <div>
     <span class="hero-location">📍 台北北投工作室 · 大台北地區可到府</span>
   </div>
+  <div class="hero-cta">
+    <a href="#pricing" class="btn-primary">看療程方案</a>
+  </div>
+  <div class="hero-image">
+    <img src="images/hero-oil-pouring.jpg" alt="Milliya 為客戶進行阿育吠陀溫油療癒，銅壺淋油的儀式" loading="eager">
+  </div>
 </header>
 
 <!-- FOR WHOM -->
@@ -538,6 +652,10 @@
     <h2 class="section-title">這個療程是為妳而存在</h2>
     <div class="divider"></div>
     <p class="section-intro">這套源自印度喀拉拉邦的傳統療癒系統，最初是為產後母親設計，但同樣適用於所有想深度調養身心、回到自己身體的女性。</p>
+
+    <div class="section-image">
+      <img src="images/whom-tender-gaze.jpg" alt="Milliya 以溫柔目光陪伴客戶，是這套療程的核心精神" loading="lazy">
+    </div>
 
     <div class="for-whom-grid">
       <div class="whom-card">
@@ -574,6 +692,9 @@
       <li>身體有一種「空」，但補品、月子餐、瑜伽都填不滿</li>
       <li>渴望被照顧，又怕被誤解為「太矯情」</li>
     </ul>
+    <div class="section-image" style="margin-top: 48px;">
+      <img src="images/pain-holding-hands.jpg" alt="一雙手溫柔接住另一雙手——這套療程從「被深深承接」開始" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -593,6 +714,11 @@
       而 Vāta 最直接的解方，就是溫熱的油、被按摩進筋膜裡的那種深度安頓。
     </div>
 
+    <div class="section-image">
+      <img src="images/philosophy-oil-detail.jpg" alt="銅壺中溫熱的藥草浸泡油緩緩落下——這是 Vāta 過盛最直接的解方" loading="lazy">
+      <p class="image-caption">溫油的儀式 · 是身體被深深安頓的開始</p>
+    </div>
+
     <p>這套源自喀拉拉邦的傳統系統，結合按摩、藥草薰蒸、藥草浴三大主軸，目的只有一個——讓妳重新住回自己的身體。</p>
   </div>
 </section>
@@ -604,6 +730,14 @@
     <h2 class="section-title">完整套組包含什麼</h2>
     <div class="divider"></div>
     <p class="section-intro">單次體驗為純按摩（Abhyanga）；完整套組則加入藥草薰蒸與藥草浴，三者協同作用，效果遠超單一療法。</p>
+
+    <div class="split-image" style="margin-bottom: 32px;">
+      <img src="images/technique-abhyanga.jpg" alt="Abhyanga 溫油按摩 — 雙手深層按入筋膜，安撫失序的神經系統">
+      <div class="split-image-text">
+        <h3>從掌心到筋膜的深度安頓</h3>
+        <p>Abhyanga 不是表層的撫觸，而是讓溫油與雙手一起被身體吸收。當妳閉上眼睛、肌肉一點一點交付出來，那是身體在說：「終於有人替我接住了。」</p>
+      </div>
+    </div>
 
     <div class="technique">
       <div class="technique-header">
@@ -658,7 +792,7 @@
 </section>
 
 <!-- PRICING -->
-<section class="pricing-section">
+<section class="pricing-section" id="pricing">
   <div class="container">
     <div class="section-eyebrow">Pricing · 服務方案</div>
     <h2 class="section-title">為不同需求的妳設計</h2>
@@ -881,6 +1015,9 @@
     <div class="section-eyebrow">About · 關於陪伴妳的人</div>
     <h2 class="section-title">為什麼是我</h2>
     <div class="divider"></div>
+    <div class="section-image" style="max-width: 560px;">
+      <img src="images/about-focused.jpg" alt="Milliya 專注地為客戶進行療程">
+    </div>
     <div class="about-content">
       <p>我是 Milliya，孕產教育的陪產員、女性身心靈整合教練。</p>
       <p>這幾年陪伴過許多位女性走過生產，我發現「生產」這件事真正的考驗，不在那十幾個小時的產程，而在產後那段「沒有人真的問過妳好不好」的四十二天。也不只是產後——許多女性在月經、備孕、長期壓力中，也一直在經歷類似的「沒被深深承接」的狀態。</p>
@@ -905,6 +1042,8 @@
   <p>© 2026 Milliya · 阿育吠陀產後按摩 暨 女性身心調養</p>
   <p style="margin-top: 8px;">台北北投工作室 · 大台北到府服務 · Email: milliya1222@gmail.com</p>
 </footer>
+
+<a href="https://forms.gle/MCZ38b8pf2ByGyBk8" class="sticky-cta" target="_blank" rel="noopener" aria-label="預約療程">預約療程 →</a>
 
 </body>
 </html>
