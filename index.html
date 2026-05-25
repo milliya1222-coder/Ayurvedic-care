@@ -7,7 +7,7 @@
 <meta name="description" content="五千年印度傳統療癒系統 × 陪產員的身心整合視角。為產後媽媽與所有渴望被深深承接的女性。台北北投工作室 / 大台北到府。">
 <meta property="og:title" content="阿育吠陀產後按摩 · 暨女性身心調養 | Milliya">
 <meta property="og:description" content="五千年印度傳統療癒系統 × 陪產員的身心整合視角。為產後媽媽與所有渴望被深深承接的女性。">
-<meta property="og:image" content="images/hero-massage.jpg">
+<meta property="og:image" content="images/fb-cover-banner.png">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,6 @@
     /* 統一所有照片色溫：微提亮 + 稍降飽和 + 淡暖色濾鏡 */
     --photo-filter: brightness(1.06) contrast(1.04) saturate(0.92) sepia(0.06);
   }
-  .hero-collage img,
   .section-image img,
   .photo-collage img,
   .split-image img {
@@ -52,67 +51,38 @@
   /* Hero */
   .hero {
     background: linear-gradient(180deg, #F2E9DC 0%, #FAF6F0 100%);
-    padding: 72px 24px 64px;
+    padding: 48px 24px 56px;
+    text-align: center;
   }
-  .hero-grid {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: center;
+  .hero-banner {
+    max-width: 1040px;
+    margin: 0 auto 36px;
   }
-  @media (min-width: 880px) {
-    .hero-grid {
-      grid-template-columns: 1fr 1.05fr;
-      gap: 56px;
-    }
-  }
-  .hero-text { text-align: center; }
-  @media (min-width: 880px) {
-    .hero-text { text-align: left; }
-    .hero-text .om-symbol,
-    .hero-text .hero-eyebrow { text-align: left; }
-  }
-  .hero-collage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 12px;
-    padding: 20px;
-    background: linear-gradient(135deg, #C8704A 0%, #B8654A 100%);
-    border-radius: 12px;
+  .hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
     box-shadow: 0 24px 50px -24px rgba(139, 69, 48, 0.4);
   }
-  .hero-collage img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 6px;
-    display: block;
-    box-shadow: 0 4px 12px rgba(61, 46, 37, 0.15);
+  .hero-supporting {
+    max-width: 640px;
+    margin: 0 auto;
   }
-  .hero-collage .hero-p1,
-  .hero-collage .hero-p2 {
-    height: 170px;
+  .hero-tagline {
+    font-family: 'Noto Serif TC', serif;
+    color: var(--text-soft);
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
   }
-  .hero-collage .hero-p3 {
-    grid-column: 1 / -1;
-    height: 240px;
-    object-position: center 30%;
-  }
-  @media (max-width: 600px) {
-    .hero-collage {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      padding: 12px;
-      gap: 8px;
-    }
-    .hero-collage .hero-p1,
-    .hero-collage .hero-p2 { height: 130px; }
-    .hero-collage .hero-p3 {
-      grid-column: auto;
-      height: 130px;
-    }
+  /* Screen-reader-only for SEO */
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
   }
   .om-symbol {
     font-size: 48px;
@@ -704,26 +674,21 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-grid">
-    <div class="hero-text">
-      <span class="om-symbol">ॐ</span>
-      <div class="hero-eyebrow">Ayurvedic Postpartum &amp; Women's Wellness Care</div>
-      <h1>阿育吠陀產後按摩<br>暨女性身心調養</h1>
-      <p class="hero-sub">五千年印度傳統療癒系統 × 陪產員的身心整合視角<br>為產後媽媽與所有渴望被深深承接的女性</p>
-      <div style="margin-bottom: 10px;">
-        <span class="hero-tag">創始 10 位名額 · 啟程禮限定</span>
-      </div>
-      <div style="margin-bottom: 28px;">
-        <span class="hero-location">📍 台北北投工作室 · 大台北地區可到府</span>
-      </div>
-      <div class="hero-cta" style="margin-top: 0;">
-        <a href="#pricing" class="btn-primary">看療程方案</a>
-      </div>
+  <div class="hero-banner">
+    <img src="images/fb-cover-banner.png" alt="阿育吠陀產後按摩 · 暨女性身心調養 — Milliya" loading="eager">
+  </div>
+  <h1 class="sr-only">阿育吠陀產後按摩 · 暨女性身心調養</h1>
+  <div class="hero-supporting">
+    <p class="hero-tagline">五千年印度傳統療癒系統 × 陪產員的身心整合視角</p>
+    <p class="hero-sub">為產後媽媽與所有渴望被深深承接的女性</p>
+    <div style="margin-bottom: 10px;">
+      <span class="hero-tag">創始 10 位名額 · 啟程禮限定</span>
     </div>
-    <div class="hero-collage">
-      <img class="hero-p1" src="images/philosophy-oil-detail.jpg" alt="銅壺中的藥草浸泡油緩緩落下" loading="eager">
-      <img class="hero-p2" src="images/about-portrait.jpg" alt="Milliya 手持阿育吠陀傳統銅壺" loading="eager">
-      <img class="hero-p3" src="images/hero-massage.jpg" alt="Milliya 為客戶進行阿育吠陀溫油按摩 Abhyanga" loading="eager">
+    <div style="margin-bottom: 28px;">
+      <span class="hero-location">📍 台北北投工作室 · 大台北地區可到府</span>
+    </div>
+    <div class="hero-cta" style="margin-top: 0;">
+      <a href="#pricing" class="btn-primary">看療程方案</a>
     </div>
   </div>
 </header>
