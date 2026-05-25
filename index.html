@@ -26,7 +26,7 @@
     /* 統一所有照片色溫：微提亮 + 稍降飽和 + 淡暖色濾鏡 */
     --photo-filter: brightness(1.06) contrast(1.04) saturate(0.92) sepia(0.06);
   }
-  .hero-image img,
+  .hero-collage img,
   .section-image img,
   .photo-collage img,
   .split-image img {
@@ -52,47 +52,95 @@
   /* Hero */
   .hero {
     background: linear-gradient(180deg, #F2E9DC 0%, #FAF6F0 100%);
-    padding: 80px 24px 60px;
-    text-align: center;
+    padding: 72px 24px 64px;
   }
-  .hero-image {
-    max-width: 560px;
-    margin: 40px auto 0;
-    padding: 0 24px;
+  .hero-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
   }
-  .hero-image img {
+  @media (min-width: 880px) {
+    .hero-grid {
+      grid-template-columns: 1fr 1.05fr;
+      gap: 56px;
+    }
+  }
+  .hero-text { text-align: center; }
+  @media (min-width: 880px) {
+    .hero-text { text-align: left; }
+    .hero-text .om-symbol,
+    .hero-text .hero-eyebrow { text-align: left; }
+  }
+  .hero-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 12px;
+    padding: 20px;
+    background: linear-gradient(135deg, #C8704A 0%, #B8654A 100%);
+    border-radius: 12px;
+    box-shadow: 0 24px 50px -24px rgba(139, 69, 48, 0.4);
+  }
+  .hero-collage img {
     width: 100%;
-    height: 380px;
     object-fit: cover;
-    object-position: center 30%;
-    border-radius: 8px;
-    box-shadow: 0 20px 50px -20px rgba(139, 69, 48, 0.3);
+    border-radius: 6px;
     display: block;
+    box-shadow: 0 4px 12px rgba(61, 46, 37, 0.15);
+  }
+  .hero-collage .hero-p1,
+  .hero-collage .hero-p2 {
+    height: 170px;
+  }
+  .hero-collage .hero-p3 {
+    grid-column: 1 / -1;
+    height: 240px;
+    object-position: center 30%;
+  }
+  @media (max-width: 600px) {
+    .hero-collage {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      padding: 12px;
+      gap: 8px;
+    }
+    .hero-collage .hero-p1,
+    .hero-collage .hero-p2 { height: 130px; }
+    .hero-collage .hero-p3 {
+      grid-column: auto;
+      height: 130px;
+    }
   }
   .om-symbol {
-    font-size: 56px;
+    font-size: 48px;
     color: var(--primary);
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-family: serif;
+    line-height: 1;
   }
   .hero-eyebrow {
-    font-size: 14px;
-    letter-spacing: 4px;
+    font-size: 12px;
+    letter-spacing: 3px;
     color: var(--text-soft);
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   .hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 18px;
     color: var(--primary-dark);
   }
   .hero-sub {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--text-soft);
-    max-width: 640px;
-    margin: 0 auto 36px;
+    margin-bottom: 24px;
+  }
+  @media (min-width: 880px) {
+    .hero h1 { font-size: 44px; }
   }
   .hero-tag {
     display: inline-block;
@@ -656,21 +704,27 @@
 
 <!-- HERO -->
 <header class="hero">
-  <span class="om-symbol">ॐ</span>
-  <div class="hero-eyebrow">Ayurvedic Postpartum &amp; Women's Wellness Care</div>
-  <h1>阿育吠陀產後按摩<br>暨女性身心調養</h1>
-  <p class="hero-sub">五千年印度傳統療癒系統 × 陪產員的身心整合視角<br>為產後媽媽與所有渴望被深深承接的女性</p>
-  <div>
-    <span class="hero-tag">創始 10 位名額 · 啟程禮限定</span>
-  </div>
-  <div>
-    <span class="hero-location">📍 台北北投工作室 · 大台北地區可到府</span>
-  </div>
-  <div class="hero-cta">
-    <a href="#pricing" class="btn-primary">看療程方案</a>
-  </div>
-  <div class="hero-image">
-    <img src="images/hero-massage.jpg" alt="Milliya 為客戶進行阿育吠陀溫油按摩（Abhyanga），雙手深層按入筋膜" loading="eager">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="om-symbol">ॐ</span>
+      <div class="hero-eyebrow">Ayurvedic Postpartum &amp; Women's Wellness Care</div>
+      <h1>阿育吠陀產後按摩<br>暨女性身心調養</h1>
+      <p class="hero-sub">五千年印度傳統療癒系統 × 陪產員的身心整合視角<br>為產後媽媽與所有渴望被深深承接的女性</p>
+      <div style="margin-bottom: 10px;">
+        <span class="hero-tag">創始 10 位名額 · 啟程禮限定</span>
+      </div>
+      <div style="margin-bottom: 28px;">
+        <span class="hero-location">📍 台北北投工作室 · 大台北地區可到府</span>
+      </div>
+      <div class="hero-cta" style="margin-top: 0;">
+        <a href="#pricing" class="btn-primary">看療程方案</a>
+      </div>
+    </div>
+    <div class="hero-collage">
+      <img class="hero-p1" src="images/philosophy-oil-detail.jpg" alt="銅壺中的藥草浸泡油緩緩落下" loading="eager">
+      <img class="hero-p2" src="images/about-portrait.jpg" alt="Milliya 手持阿育吠陀傳統銅壺" loading="eager">
+      <img class="hero-p3" src="images/hero-massage.jpg" alt="Milliya 為客戶進行阿育吠陀溫油按摩 Abhyanga" loading="eager">
+    </div>
   </div>
 </header>
 
