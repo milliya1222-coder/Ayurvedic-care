@@ -588,6 +588,37 @@
   }
   footer a { color: var(--gold); text-decoration: none; }
 
+  /* Quiz banner */
+  .quiz-banner {
+    background: linear-gradient(135deg, #F4ECE0 0%, #FBF6F0 100%);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 52px 32px;
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    box-shadow: 0 20px 48px -28px rgba(139, 69, 48, 0.35);
+  }
+  .quiz-dots { display: flex; justify-content: center; gap: 10px; margin-bottom: 22px; }
+  .quiz-dots span { width: 14px; height: 14px; border-radius: 50%; }
+  .quiz-banner h2 { font-size: 28px; color: var(--primary-dark); margin-bottom: 14px; }
+  .quiz-banner p {
+    color: var(--text-soft);
+    font-size: 16px;
+    max-width: 540px;
+    margin: 0 auto 30px;
+  }
+  .quiz-meta {
+    font-size: 13px;
+    color: var(--text-soft);
+    margin-top: 20px;
+    letter-spacing: 1px;
+  }
+  @media (max-width: 600px) {
+    .quiz-banner { padding: 40px 22px; }
+    .quiz-banner h2 { font-size: 23px; }
+  }
+
   /* Hero CTA */
   .hero-cta {
     margin-top: 32px;
@@ -732,6 +763,24 @@
     <p class="image-caption" style="margin-bottom: 32px;">三個片刻 · 從目光、溫油、到承接</p>
 
     <p>這套源自喀拉拉邦的傳統系統，結合按摩、藥草薰蒸、藥草浴三大主軸，目的只有一個——讓妳重新住回自己的身體。</p>
+  </div>
+</section>
+
+<!-- QUIZ CTA -->
+<section style="padding-top: 0;">
+  <div class="container">
+    <div class="quiz-banner">
+      <div class="quiz-dots">
+        <span style="background:#8E9BC4;" title="風 Vāta"></span>
+        <span style="background:#D9774E;" title="火 Pitta"></span>
+        <span style="background:#7FA88B;" title="水土 Kapha"></span>
+      </div>
+      <div class="section-eyebrow">Free Quiz · 免費測驗</div>
+      <h2>妳此刻，正流動著哪一股能量？</h2>
+      <p>風（Vāta）、火（Pitta）、水土（Kapha）——阿育吠陀說，我們身上同時住著這三股能量。花 3 分鐘，12 道貼近生活的情境題，照見此刻妳的身、心、靈各自的傾向，並收到一個當季可以為自己做的小練習。</p>
+      <a href="quiz/" class="btn">開始免費測驗 →</a>
+      <div class="quiz-meta">🌿 12 題情境 · ⏱ 約 3 分鐘 · 🪞 身心靈三層解讀</div>
+    </div>
   </div>
 </section>
 
