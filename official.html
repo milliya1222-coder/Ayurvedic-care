@@ -659,11 +659,15 @@
     position: relative;
     z-index: 1;
   }
+  /* 注意：此元素用 <footer>，需覆寫全站 footer 的深色底，否則字會踩在咖啡色背景上 */
   .testimonial-author {
+    background: transparent;
     font-size: 13px;
     color: #5C4636;
     letter-spacing: 1px;
-    padding-top: 14px;
+    text-align: left;
+    padding: 14px 0 0;
+    margin: 0;
     border-top: 1px solid #EFE4D5;
   }
   .testimonial-author strong { color: var(--primary-dark); font-weight: 600; }
